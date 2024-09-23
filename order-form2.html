@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container" id="content">
+    <div class="content-form">
+    <h1> Formulaire de Commande </h1>
+    <div class="formulaire">
+        <form action="" >
+            <div class="labelgroupe">
+                <label for="nom">Nom</label><br>
+                <input class="full" type="text" placeholder="Nom complet">
+             </div>
+             <div class="labelgroupe">
+                <label for="nom">Nom de l'Etablissement </label><br>
+                <input class="full" type="text" placeholder="Nom de l'Etablissement">
+             </div>
+             <div class="labelgroupe row">
+                <div class="col2"  style="margin-right: 50px;">
+                    <label for="nom">E-mail </label><br>
+                    <input class="full" type="text"  id="email" placeholder="E-mail">
+                </div>
+                <div class="col2">
+                    <label for="nom">Téléphone </label><br>
+                    <input class="full" type="tel" placeholder="+213 55-555-5555">
+                </div>
+            </div>
+
+
+            
+            <div class="labelgroupe row">
+               
+                  <label for="nom" >Budget | تحديد الميزانية </label>
+            </div>
+
+                <div class="labelgroupe row">
+
+                    <div class="col2 "  style="margin-right: 50px;margin-top: -12px;">
+                        <input class="full" type="" placeholder="min">
+                    </div>
+                    <div class="col2 " style="margin-top: -12px;">
+                        <input class="full " type="" placeholder="max">
+                    </div>
+                </div>
+             
+                <div class="labelgroupe ">
+                    <label for="nom">Services | الخدمات </label><br>
+                    <select class="full dropdown"  name="service" id="serviceSelect">
+                        <option disabled selected >choisir un service</option>
+                        <option value="impression">Impression</option>
+                        <option value="enseigne">Enseigne & Aménagement </option>
+                        <option value="deco">Décoration Interieur & Exterieur</option>
+                        <option value="logo">Logo Design</option>
+
+                       </select>
+                 </div>
+ <!--impression--><div class="labelgroupe   choice1" id="choice1" style="max-width : 100%;margin-bottom: 50px;display: none; ">
+                    <div class=""  >
+                        <label for="nom" class="title">Type | النوع </label><br>
+                        <hr>
+                        <div class="checkbox-group slider " style="margin-bottom: 70px;">
+                            <div class="checkbox-item  bg-1" style="background-image: url(images/impression/flayer.png); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                <input type="checkbox" id="flayer" name="flayer" >
+                                <label for="flayer">Flayer</label>
+                                
+                            </div>
+                            
+                            
+
+
+                                <div class="checkbox-item  " style="background-image: url(images/impression/brochure.jpg); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                    <input type="checkbox" id="brochure" name="brochure" >
+                                    <label for="brochure">Brochure</label>
+                                </div>
+                                <div class="checkbox-item   " style="background-image: url(images/impression/marquage.jpg); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                    <input type="checkbox" id="marquage" name="marquage">
+                                    <label for="marquage">Marquage</label>
+                                </div>
+                        </div>
+                        <div class="checkbox-group slider " style="margin-bottom: 70px;">
+
+                            <div class="checkbox-item  " style="background-image: url(images/impression/impressionNumerique.PNG); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                <input type="checkbox" id="impressionNum" name="impressionNum" >
+                                <label for="impressionNum" style=" font-size: 14px; padding-top: 13px ;">Impression uv</label>
+                                
+                            </div>
+                            <div class="checkbox-item -5 " style="background-image: url(images/impression/carteVisite.jpg); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                    <input type="checkbox" id="carteVisite" name="carteVisite" >
+                                     <label for="carteVisite">Carte Visite</label>
+                            </div>
+                            
+                            
+                        </div>
+                                       
+                    </div>
+                </div>
+              
+ <!--enseigne--><div class="labelgroupe  choice2" id="choice2" style="max-width : 100%; margin-bottom: 50px;display: none;">
+                    <div class=""  >
+                        <label for="nom" class="title">Type | النوع </label><br>
+                        <hr>
+                     <div class="formargin"  >
+                        <div class="checkbox-group slider " style="margin-bottom: 70px;">
+
+                            <div class="checkbox-item img1" style="background-image: url(images/services/enseigne3d.jpeg); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                <input type="radio" id="3d" name="type1" >
+                                <label for="3d" style=" font-size: 14px; padding-top: 13px ;">3D en Relief</label>
+                            </div>
+                            <div class="checkbox-item  " style="background-image: url(images/services/enseigne2d.jpg); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                <input type="radio" id="2d" name="type1" >
+                                <label for="2d">2D en Relief</label>
+                            </div>
+                        </div>
+                        <div class="checkbox-group slider ">
+                            <div class="checkbox-item   " style="background-image: url(images/services/enseigne\ lumineux.jpg); background-size: 202px 140px ; background-repeat: no-repeat;">
+                                <input type="radio" id="lum" name="type2" >
+                                <label for="lum" style=" font-size: 14px; padding-top: 13px ;">Lumineux</label>
+                            </div>
+                            <div class="checkbox-item " style="background-image: url(images/services/enseigne\ nonlumineux.jpg); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                <input type="radio" id="nonLum" name="type2" >
+                                <label for="nonLum" id="nlum">Non Lumineux</label>
+                            </div>
+                         </div>
+
+                      </div>
+                        <label for="nom" class="title">Matière | المادة </label><br>
+                        <hr>
+                        <div class="formargin ">
+                            <div class="checkbox-group slider "  style="margin-bottom: 70px;">
+
+                                <div class="checkbox-item radio-item " style="background-image: url(images/services/alucoband.jpg); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                    <input type="radio" id="papier" name="Matière" >
+                                    <label for="papier" style=" font-size: 14px; padding-top: 13px ;">Alucoband</label>
+                                </div>
+                                <div class="checkbox-item  radio-item" style="background-image: url(images/services/forex.jpg); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                    <input type="radio" id="forex" name="Matière" >
+                                    <label for="forex">Forex</label>
+                                </div>
+                                <div class="checkbox-item  radio-item" style="background-image: url(images/services/pmma.jpg); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                    <input type="radio" id="pmma" name="Matière" >
+                                    <label for="pmma">pmma</label>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="nom" class="title">Mesures | القياسات</label><br>
+                        <hr>      
+                         
+                        <div class="labelgroupe2 row" >
+                            <div class="col2 col3"  style=" margin-right: 60px;">
+                                <label for="nom">Hauteur | الارتفاع  </label><br>
+                                <input class="full" type="" placeholder="160cm">
+                            </div>
+                            <div class="col2 col3" style=" margin-right: 60px;">
+                                <label for="nom">Longueur | الطول </label><br>
+                                <input class="full" type="" placeholder="160cm">
+                            </div>
+                            <div class="col2 col3">
+                                <label for="nom">Largeur | العرض</label><br>
+                                <input class="full" type="" placeholder="160cm">
+                            </div>
+                        </div>
+ 
+                       
+                    </div>
+                </div>
+
+             
+<!--decoration--><div class="labelgroupe  choice3" id="choice3" style="max-width : 100%; margin-bottom: 50px; display: none; ">
+                    <div class=""  >
+                        <label for="nom" class="title">Type | النوع </label><br>
+                        <hr>
+                    <div class=""  >
+                        
+
+                        <div class="checkbox-group slider " style="margin-bottom: 70px;">
+                            <div class="checkbox-item  " style="background-image: url(images/services/logomurale.PNG); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                <input type="checkbox" id="logo" name="deco" >
+                                <label for="logo" id="nlum">logo murale</label>
+                            
+                            </div>
+                            <div class="checkbox-item  " style="background-image: url(images/services/separation.PNG); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                <input type="checkbox" id="sep" name="deco" >
+                                <label for="sep">séparation</label>
+                            </div>
+                            <div class="checkbox-item " style="background-image: url(images/services/plafond.PNG); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                <input type="checkbox" id="plaf" name="deco">
+                                <label for="plaf">plafond</label>
+                            </div>
+                    </div>
+                    <div class="checkbox-group slider " style="margin-bottom: 70px;">
+
+                        <div class="checkbox-item  " style="background-image: url(images/services/paravant.PNG); background-size: 202px 145px ; background-repeat: no-repeat;">
+                            <input type="checkbox" id="parav" name="deco" >
+                            <label for="parav" style=" font-size: 14px; padding-top: 13px ;">parravant</label>
+                            
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                        <label for="nom" class="title">Matière | المادة </label><br>
+                        <hr>
+                        <div class="formargin ">
+                            <div class="checkbox-group slider " style="margin-bottom: 70px;">
+
+                                <div class="checkbox-item  radio-item " style="background-image: url(images/services/alucoband.jpg); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                    <input type="radio" id="alucoband" name="Matière" >
+                                    <label for="alucoband" style=" font-size: 14px; padding-top: 13px ;">Alucoband</label>
+                                </div>
+                                <div class="checkbox-item radio-item" style="background-image: url(images/services/forex.jpg); background-size: 202px 145px ; background-repeat: no-repeat;">
+                                    <input type="radio" id="forexX" name="Matière" >
+                                    <label for="forexX">Forex</label>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <label for="nom" class="title">Mesures | القياسات</label><br>
+                        <hr>      
+                        
+                        <div class="labelgroupe2 row" >
+                            <div class="col2 col3"  style=" margin-right: 60px;">
+                                <label for="nom">Hauteur | الارتفاع  </label><br>
+                                <input class="full" type="" placeholder="160cm">
+                            </div>
+                            <div class="col2 col3" style=" margin-right: 60px;">
+                                <label for="nom">Longueur | الطول </label><br>
+                                <input class="full" type="" placeholder="160cm">
+                            </div>
+                            <div class="col2 col3">
+                                <label for="nom">Largeur | العرض</label><br>
+                                <input class="full" type="" placeholder="160cm">
+                            </div>
+                        </div>
+
+                    
+                    </div>
+                    </div>
+        </div>
+        
+                 <div class="labelgroupe row">
+                    <div class="qte"  style="width: 46%;">
+                        <label for="nom">Quantité | الكمية </label><br>
+                        <input class="full" type="number" min="1" placeholder="Quantité">
+                    </div>
+                </div>
+                <div class="labelgroupe row">
+                    <div class="date"  style="width: 100%;">
+                        <label for="nom">Date de Livraison Souhaitée </label><br>
+                        <input class="full" type="date" placeholder="Choisir une date ">
+                    </div>
+                </div>
+                <div class="labelgroupe ">
+                    <div class="file-drop-area dropZone">
+                        <span class="fake-btn">Choisir un Fichier</span>
+                        <span class="file-msg">Ou déposez ici</span>
+                        <input class="file-input" type="file" multiple>
+                        <div class="file-list"></div>
+                        
+                   </div>
+                </div>
+               
+                <div class="labelgroupe">
+                    
+                        <label for="message">Remarques </label><br>
+                        <textarea id="message" name="message" rows="4" cols="50" placeholder="Avez-vous d'autres remarques ? Laissez-nous savoir. "></textarea>
+                  
+                </div>
+    </div>
+        </form>
+        
+       
+        
+    </div>
+    
+    
+ <div class="btn">
+              <button type="button" id="cmd" id="envoyer">Envoyer</button>
+        </div>
+
+</div>
+
+    <style>
+      
+        @import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap');
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+           right:0;
+            
+        }
+        html{
+            right:-20px;
+        }
+      
+       
+        .container {
+            display: grid;
+            height: 100vh; /* Pour utiliser toute la hauteur de la fenêtre */
+            justify-items: center; /* Pour centrer verticalement et horizontalement */
+         
+        }
+
+        .content-form {
+           
+            /* Styles de votre élément centré */
+            background-color: rgba(211, 211, 211, 0.014);
+            padding: 20px 100px;
+            justify-items: center;
+            
+            
+        }
+        .formulaire{
+
+            height: 85%;
+            width: 135%;
+            padding: 20px 100px;
+            margin-left: -100px;
+            
+            
+        }
+        form{
+            width: 100%;
+        }
+        .labelgroupe{
+            width: 97%;
+            margin-left: -85px;
+            margin-top: 15px ;
+        }
+        .labelgroupe .full{
+            width: 100%;
+            margin-top: 5px;
+            padding: 15px;
+            margin-left: -5px;
+            border: 1px solid #e4e2e2;
+            border-radius: 5px;
+            outline-color:#1f1f1e7a;
+           
+
+        }
+        .labelgroupe .dropdown{
+            width: 105%;
+        }
+        input::placeholder{
+            color: rgb(201, 200, 200);
+            
+        }
+        
+        .row{
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+              
+             
+        }
+        .col2{
+            flex:1;
+        }
+        .labelgroupe2{
+            width: 97%;
+            margin-top: 15px ;
+        }
+        
+        
+        .col3 {
+            flex: 1;
+           width: 0px;
+           
+        }
+        .col3 .full{
+            width: 110%;
+           
+        }
+        select {
+                cursor: pointer;
+                
+              }
+        
+
+              /* dreag drop file*/
+             
+
+        .file-drop-area {
+            width: 97%;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .file-drop-area.highlight {
+            border-color: #007bff;
+        }
+        .fake-btn {
+            display: block;
+            margin-bottom: 10px;
+            color: rgba(27, 187, 99, 0.952);
+        }
+        .file-input {
+            display: none;
+        }
+        .file-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 8px;
+            background-color: #f9f9f9;
+            margin-bottom: 5px;
+        }
+        .file-name {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        .close-btn {
+            cursor: pointer;
+        }
+
+        /*btn envoyer */
+        .btn{
+            text-align: center;
+            
+        }
+        
+        button{
+            
+            width: 150px;
+            border:2px solid rgba(27, 187, 99, 0.952);
+            border-radius: 20px;
+            background-color:  rgba(252, 252, 252, 0.952);
+            padding: 10px;
+            cursor: pointer;
+            transition: all ease-in 0.5s;
+            font-family:  "Andada Pro", serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        button:hover{
+            color: #f9f9f9;
+            background-color:  rgba(27, 187, 99, 0.952);
+        }
+        textarea{
+            width: 97%;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline-color:#1f1f1e7a;
+            padding: 20px;
+            
+            font-family:'Arial Narrow', Arial, sans-serif;
+            font-size: 18px;
+            
+
+        }
+    </style>
+      <style>
+        /****************************************style choices service select menu ***************************************************************/
+                   .title{
+                       
+                      margin-left: 45%;
+                     
+                    }
+                    .formargin{
+                        margin-bottom: 50px;
+                    }
+
+                    hr{
+                        color:  rgb(255, 255, 242);; /* Modifier la couleur de la ligne */
+                        background-color: rgb(255, 255, 250); /* Optionnel : si la couleur ne change pas, vous pouvez également définir la couleur de fond */
+                        height: 0.1px; /* Optionnel : pour définir l'épaisseur de la ligne */
+                        margin: 20px auto; 
+                        border-color: rgb(255, 255, 255);
+                    }
+                    .checkbox-group {
+                      display: flex;
+                      flex-wrap: nowrap;
+                      gap: 15px;
+                      width: 20%;
+                      
+                    }
+                    
+                    .checkbox-item  {
+                       
+                      width: 26%;
+                      height: 110px;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      border: 1px solid #ccc;
+                      border-radius: 8px 8px 0 0;
+                      padding: 15px;
+                      position: relative;
+                      z-index: 100000;
+                    }
+                   
+                    
+                    .checkbox-item input[type="checkbox"] {
+                      appearance: none;
+                      -webkit-appearance: none;
+                      position: absolute;
+                      right: 10px;
+                      top: 10px;
+                      width: 25px;
+                      height: 25px;
+                      background-color: #fff;
+                      border: 2px solid #ccc;
+                      border-radius: 4px;
+                      cursor: pointer;
+                    }
+                    
+                    .checkbox-item  input[type="checkbox"]:checked {
+                      background-color: #4CAF50;
+                      border-color: #4CAF50;
+                    }
+                    
+                    
+                    .checkbox-item   input[type="checkbox"]:checked:after {
+                      content: "✓";
+                      color: #fff;
+                      position: absolute;
+                      right: 5px;
+                      top: 0px;
+                      font-size: 18px;
+                    }
+                    
+                    .checkbox-item   label {
+                       
+                    background-color:#0c0c0c67;
+                    text-align: CENTER;
+                     width: 119%;
+                     padding: 10px 0;
+                     margin-top: 128px;
+                      font-size: 16px;
+                      
+                      text-transform: uppercase;
+                      color: #e4e4e4;
+                      cursor: pointer;
+                      border-radius:0 0 7px 7px;
+                    }
+                    .radio-item{
+                        height: 75px;
+                    }
+                    .radio-item label{
+                     margin-top: 97px;
+                    }
+                    
+                    .checkbox-item   input[type="radio"] {
+                      appearance: none;
+                      -webkit-appearance: none;
+                      position: absolute;
+                      right: 10px;
+                      top: 10px;
+                      width: 25px;
+                      height: 25px;
+                      background-color: #fff;
+                      border: 1px solid #ccc;
+                      border-radius: 20px;
+                      cursor: pointer;
+                    }
+                    
+                    .checkbox-item   input[type="radio"]:checked {
+                      background-color: #4CAF50;
+                      border-color: #4CAF50;
+                    }
+                    .checkbox-item   input[type="radio"]:checked:after {
+                      content: "✓";
+                      color: #fff;
+                      position: absolute;
+                      right: 5px;
+                      top: 0px;
+                      font-size: 18px;
+                    }
+                    .slider {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                      /*  white-space: nowrap; /* Ensures images stay on a single line */
+                        width: 100%; /* Adjust width as needed */
+                        height: 150px;
+                    }
+                  
+
+   /****resonsive queries for mobile*****/
+       @media only screen and (max-width: 700px) {
+                       
+                        .container {
+                                width: 90%; 
+                              
+                                
+                        }
+
+                       .content-form h1 {
+                        
+                        font-size: 23px;
+                        margin-left: 30px;
+                        padding-left: 29px;
+                       }
+                       .content-form {
+                            /* Styles de votre élément centré */
+                            width:58%;
+                            
+                            
+                       }
+                       .formulaire{
+                        
+                            
+                            width: 119%;
+                            padding-right:-10px;
+                            margin-left: -95px;
+                            
+                            
+                        }
+                         form{
+                            margin-left: -60px;
+                            width: 130%;
+                        }
+                        .labelgroupe{
+                            width: 97%;
+                            margin-left: -6px;
+                            margin-top: 15px ;
+                        }
+                         .labelgroupe .full{
+                            
+                            padding: 15px;
+                            margin-left: -12px;
+                            
+                        }
+                   
+                        .file-drop-area {
+                            width: 96%;
+                            margin-left: -9px;
+                           
+                        }
+                      
+                        textarea{
+                            
+                            margin-left:-9px ;
+                        }
+                        .checkbox-group {
+                           
+                            flex-wrap: nowrap;
+                             }
+                            
+                            .checkbox-item   {
+                            
+                            width: 21%;
+                            padding: 10px;
+                            }
+                           
+                            .checkbox-group .checkbox-item{ 
+                            margin:0 5px;
+
+                        }
+                        .checkbox-group .checkbox-item label  {
+                      
+                         width: 115%;
+                               
+                     }
+                    
+                        .checkbox-item   label {
+                        
+                        background-color:#0c0c0c67;
+                       
+                            width: 117%;
+                            padding: 10px 0;
+                            margin-top: 124px;
+                              
+                        }
+                        
+                       
+                        .radio-item label{
+                            margin-top: 94px;
+                            
+                            }
+                        button{
+                               
+                                background-color:  rgba(27, 187, 99, 0.952);
+                                margin-left: 50px;
+                            }
+         }         
+
+       @media only screen and (max-width: 667px) {
+        .labelgroupe{
+                            width: 90%;
+                            margin-left:20px;
+                            margin-top: 15px ;
+                    }
+                    
+                        .content-form h1 {
+                        
+                          
+                            margin-left: 39px;
+                            padding-left: 22px;
+                            text-align: center;
+                        }
+                         form{
+                            margin-left: -80px;
+                            width: 140%;
+                        }
+                      
+       }
+
+
+       @media only screen and (max-width: 400px) {
+                       
+                       
+                       .content-form h1 {
+                        font-size: 19px;
+                        margin-left: 40px;
+                       
+                        text-align: center;
+                       }
+                       .content-form {
+                       
+                            /* Styles de votre élément centré */
+                            width:55%;
+                           
+                          margin-left: -35px;
+                        right: 0;
+                        left: 0;
+                          
+                       }
+
+                       .formulaire{
+                            width: 165%;
+                            padding-right:0px;
+                        }
+                         form{
+                           
+                            width: 107%;
+                            margin-left: -45px;
+                           
+                        }
+                       
+                        .labelgroupe{
+                            width: 92%;
+                           margin-left: 5px;
+                            margin-top: 15px ;     
+                        }
+                        .labelgroupe .full{
+                            width: 100%;
+                            margin-left: -5px;
+                        }
+                        
+                        .checkbox-group {
+                               
+                                
+                                width: 108%;
+                                margin-left: -2px;
+                                gap: 5px;
+                           }   
+                
+                            .checkbox-item  {
+                                width: 28%;
+                            }
+                            .checkbox-item 
+                            { background-image: url(images/LOGO.png);}
+                           
+                            .checkbox-item   label{
+                                width: 122%;
+                                padding: 8px 3px;
+                            }
+                            .radio-item label{
+                                margin-top: 90px;
+                                
+                                }
+                            .title{
+                       
+                                margin-left: 35%;
+                                
+                                }
+                            
+                                button{
+                                        
+                                        background-color:  rgba(27, 187, 99, 0.952);
+                                        margin-left: 5px;
+                                    }
+                            .checkbox-group .checkbox-item label .nlum {
+                                
+                                    padding: 20px 0;
+                                    font-size: 15px;
+                                
+                                }
+                                .file-drop-area, textarea{
+                                    margin-left: -2px;
+                                }
+        }
+                    </style>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    /* calandrier */
+    config ={
+       
+        locale: {
+            weekdays: {
+                shorthand: ["Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa"],
+                longhand: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
+            },
+            months: {
+                shorthand: ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Aoû", "Sep", "Oct", "Nov", "Déc"],
+                longhand: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+            }
+        }
+
+    }
+    flatpickr("input[type=date]", config);
+
+
+    /*drag drop file*/
+ 
+   
+    const dropZone = document.querySelector('.dropZone');
+  const fakeBtn = dropZone.querySelector('.fake-btn');
+  const fileInput = dropZone.querySelector('.file-input');
+  const fileMsg = dropZone.querySelector('.file-msg');
+  const fileList = dropZone.querySelector('.file-list');
+
+  fakeBtn.addEventListener('click', () => {
+    fileInput.click();
+  });
+
+  fileInput.addEventListener('change', () => {
+    const files = fileInput.files;
+    handleFiles(files);
+  });
+
+  dropZone.addEventListener('dragover', (event) => {
+    event.preventDefault();
+    dropZone.classList.add('highlight');
+  });
+
+  ['dragleave', 'drop'].forEach((eventName) => {
+    dropZone.addEventListener(eventName, () => {
+      dropZone.classList.remove('highlight');
+    });
+  });
+
+  dropZone.addEventListener('drop', (event) => {
+    event.preventDefault();
+    const files = event.dataTransfer.files;
+    handleFiles(files);
+  });
+
+  const handleFiles = (files) => {
+    for (const file of files) {
+      const item = document.createElement('div');
+      item.classList.add('file-item');
+      item.innerHTML = `
+        <span class="file-name">${file.name}</span>
+        <span class="close-btn">x</span>
+      `;
+      fileList.appendChild(item);
+    }
+    fileMsg.style.display = 'none';
+    const closeButtons = dropZone.querySelectorAll('.close-btn');
+    closeButtons.forEach(button => button.addEventListener('click', handleDelete));
+  };
+
+  const handleDelete = (event) => {
+    const closeButton = event.target;
+    const fileItem = closeButton.parentElement;
+    fileItem.remove();
+    if (fileList.children.length === 0) {
+      fileMsg.style.display = 'block';
+    }
+  };
+
+/* convertir et envoyer */
+
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#cmd').click(function () {
+    doc.fromHTML($('#content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+});
+
+
+</script>
+<!--select menu choices-->
+<script >
+    document.addEventListener("DOMContentLoaded", function() {
+    const serviceSelect = document.getElementById('serviceSelect');
+    const choice1Div = document.getElementById('choice1');
+    const choice2Div = document.getElementById('choice2');
+    const choice3Div = document.getElementById('choice3');
+
+
+    serviceSelect.addEventListener('change', function() {
+        if (serviceSelect.value === 'impression') {
+            choice1Div.style.display = 'block';
+        } else {
+            choice1Div.style.display = 'none';
+        }
+    });
+
+    serviceSelect.addEventListener('change', function() {
+        if (serviceSelect.value === 'enseigne') {
+            choice2Div.style.display = 'block';
+        } else {
+            choice2Div.style.display = 'none';
+        }
+    });
+    serviceSelect.addEventListener('change', function() {
+        if (serviceSelect.value === 'deco') {
+            choice3Div.style.display = 'block';
+        } else {
+            choice3Div.style.display = 'none';
+        }
+    });
+    // Afficher choice1 lorsque l'option "Impression" est sélectionnée
+    const impressionOption = document.querySelector('option[value="impression"]');
+    impressionOption.addEventListener('click', function() {
+        choice1Div.style.display = 'block';
+    });
+
+    // Afficher choice2 lorsque l'option "enseigne" est sélectionnée
+    const enseigneOption = document.querySelector('option[value="enseigne"]');
+    enseigneOption.addEventListener('click', function() {
+        choice2Div.style.display = 'block';
+    });
+    // Afficher choice1 lorsque l'option "deco" est sélectionnée
+    const decoOption = document.querySelector('option[value="deco"]');
+    decoOption.addEventListener('click', function() {
+        choice3Div.style.display = 'block';
+    });
+
+});
+
+</script>
+
+<!-- send pdf to email-->
+<script src="index.js"></script>
+</body>
+
+</html>
